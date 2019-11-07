@@ -4,11 +4,11 @@
 A e621 API wrapper for python!
 
 
-###Current status
+### Current status
 
 Beta
 
-###documentation
+### documentation
 
 **Installation**
 
@@ -39,13 +39,13 @@ run: `pip3 install e621py`
     
     strout = post.GetDataString() #Returns JSON output as string
 
-##Notice
+### Notice
 
 By using this module, you agree to E621s ToS, and you are willing to view sesitive content (NSFW/L)
 
 I am NOT responsible for any actions done with this module
 
-##Credit
+### Credit
 
 Everything was done by me
 
