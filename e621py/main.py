@@ -45,6 +45,7 @@ class Post:
         URL = "https://e621.net/post/show.json?id="+self.Post_ID
         uwu = urllib.request.Request(URL, headers=Head)
         owo = urllib.request.urlopen(uwu)
+        return owo
     def GetDataString(self):
         parm = {
             "_client":"epy/0.0 (This is a python module by github.com/raccoondude)"
@@ -56,3 +57,17 @@ class Post:
         uwu = urllib.request.Request(URL, headers=Head)
         owo = urllib.request.urlopen(uwu)
         return owo.read()
+    def GetDataJson(self):
+        parm = {
+            "_client":"epy/0.0 (This is a python module by github.com/raccoondude)"
+        }
+        Head = {
+                "User-Agent":"EPY/1.0 (A_raccoondude)"
+        }
+        URL = "https://e621.net/post/show.json?id="+self.Post_ID
+        uwu = urllib.request.Request(URL, headers=Head)
+        owo = urllib.request.urlopen(uwu)
+        owo = owo.read()
+        owo = owo.decode()
+        uwu = json.loads(owo)
+        return uwu
