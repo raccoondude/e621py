@@ -1,14 +1,14 @@
 from distutils.core import setup
 setup(
-  name = 'epy',         # How you named your package folder (MyLib)
-  packages = ['epy'],   # Chose the same as "name"
+  name = 'e621py',         # How you named your package folder (MyLib)
+  packages = ['e621py'],   # Chose the same as "name"
   version = '0.1',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'A e621 API wraper',   # Give a short description about your library
   author = 'Raccoondude',                   # Type in your name
-  author_email = 'email@raccoondude',      # Type in your E-Mail
-  url = 'http://raccoondude',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/raccoondude/epy/archive/0.2.tar.gz',    # I explain this later on
+  author_email = 'email@raccoondude.com',      # Type in your E-Mail
+  url = 'http://raccoondude.com',   # Provide either the link to your github or to your website
+  download_url = 'https://github.com/raccoondude/epy/archive/0.1.tar.gz',    # I explain this later on
   keywords = ['API', 'furry', 'e621'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'urllib',
