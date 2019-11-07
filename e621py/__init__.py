@@ -1,1 +1,1 @@
-from main import *
+from epy.main import *
