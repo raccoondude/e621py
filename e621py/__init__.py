@@ -1,1 +1,1 @@
-from epy.main import *
+from e621py.main import *
