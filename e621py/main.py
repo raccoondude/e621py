@@ -36,9 +36,6 @@ class Post:
     def __init__(self, Post_ID):
         self.Post_ID = Post_ID
     def GetData(self):
-        parm = {
-            "_client":"epy/0.0 (This is a python module by github.com/raccoondude)"
-        }
         Head = {
                 "User-Agent":"EPY/1.0 (A_raccoondude)"
         }
@@ -47,9 +44,6 @@ class Post:
         owo = urllib.request.urlopen(uwu)
         return owo
     def GetDataString(self):
-        parm = {
-            "_client":"epy/0.0 (This is a python module by github.com/raccoondude)"
-        }
         Head ={
                 "User-Agent":"EPY/1.0 (A_raccoondude)"
         }
@@ -58,9 +52,6 @@ class Post:
         owo = urllib.request.urlopen(uwu)
         return owo.read()
     def GetDataJson(self):
-        parm = {
-            "_client":"epy/0.0 (This is a python module by github.com/raccoondude)"
-        }
         Head = {
                 "User-Agent":"EPY/1.0 (A_raccoondude)"
         }
@@ -71,3 +62,15 @@ class Post:
         owo = owo.decode()
         uwu = json.loads(owo)
         return uwu
+    def GetTags(self):
+        Head = {
+            "User-Agent":"EPY/1.0 (A_raccoondude)"
+        }
+        URL = "https://e621.net/post/show.json?id="+self.Post_ID
+        uwu = urllib.request.Request(URL, headers=Head)
+        owo = urllib.request.urlopen(uwu)
+        owo = owo.read()
+        owo = owo.decode()
+        uwu = json.loads(owo)
+        uwu = uwu['tags']
+        return uwu.split(" ")
