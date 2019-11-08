@@ -24,11 +24,12 @@ class User:
         return owo['password_hash']
 
 class Post_Data:
-    def __intit__(self, ID, tags, image_url, artist):
+    def __init__(self, ID, tags, file_url, artist, rating):
         self.ID = ID
         self.tags = tags
-        self.image_url = image_url
+        self.file_url = file_url
         self.artist = artist
+        self.rating = rating
         
 
     
@@ -60,8 +61,8 @@ class Post:
         owo = urllib.request.urlopen(uwu)
         owo = owo.read()
         owo = owo.decode()
-        uwu = json.loads(owo)
-        return uwu
+        UwU = json.loads(owo)
+        return UwU
     def GetTags(self):
         Head = {
             "User-Agent":"EPY/1.0 (A_raccoondude)"
@@ -74,3 +75,67 @@ class Post:
         uwu = json.loads(owo)
         uwu = uwu['tags']
         return uwu.split(" ")
+    def MakePostData(self):
+        Head = {
+            "User-Agent":"EPY/1.0 (A_raccoondude)"
+        }
+        URL = "https://e621.net/post/show.json?id="+self.Post_ID
+        uwu = urllib.request.Request(URL, headers=Head)
+        owo = urllib.request.urlopen(uwu)
+        owo = owo.read()
+        owo = owo.decode()
+        UwU = json.loads(owo)
+        ID = UwU['id']
+        tags = UwU['tags']
+        artist = UwU['artist']
+        file_URL = UwU['file_url']
+        rating = UwU['rating']
+        OwO = Post_Data(ID, tags, artist, file_URL, rating)
+        return OwO
+    def GetArtist(self):
+        Head = {
+            "User-Agent":"EPY/1.0 (A_raccoondude)"
+        }
+        URL = "https://e621.net/post/show.json?id="+self.Post_ID
+        uwu = urllib.request.Request(URL, headers=Head)
+        owo = urllib.request.urlopen(uwu)
+        owo = owo.read()
+        owo = owo.decode()
+        UwU = json.loads(owo)
+        return UwU['artist']
+    def GetFileURL(self):
+        Head = {
+            "User-Agent":"EPY/1.0 (A_raccoondude)"
+        }
+        URL = "https://e621.net/post/show.json?id="+self.Post_ID
+        uwu = urllib.request.Request(URL, headers=Head)
+        owo = urllib.request.urlopen(uwu)
+        owo = owo.read()
+        owo = owo.decode()
+        UwU = json.loads(owo)
+        return UwU['file_url']
+    def GetRating(self):
+        Head = {
+            "User-Agent":"EPY/1.0 (A_raccoondude)"
+        }
+        URL = "https://e621.net/post/show.json?id="+self.Post_ID
+        uwu = urllib.request.Request(URL, headers=Head)
+        owo = urllib.request.urlopen(uwu)
+        owo = owo.read()
+        owo = owo.decode()
+        UwU = json.loads(owo)
+        return UwU['rating']
+    def isNSFW(self):
+        Head = {
+            "User-Agent":"EPY/1.o (A_raccoondude)"
+        }
+        URL = "https://e621.net/post/show.json?id="+self.Post_ID
+        uwu = urllib.request.Request(URL, headers=Head)
+        owo = urllib.request.urlopen(uwu)
+        owo = owo.read()
+        owo = owo.decode()
+        UwU = json.loads(owo)
+        if (UwU['rating'] == 's'):
+            return False
+        else:
+            return True
