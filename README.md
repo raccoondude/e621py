@@ -6,7 +6,7 @@ A e621 API wrapper for python!
 
 ### Current status
 
-Beta Devloping (0.7)
+Beta Devloping (0.12)
 
 ### documentation
 
@@ -36,8 +36,10 @@ run: `pip3 install e621py`
     post = Post("POST ID")
     
     jsonout = post.GetData() #Returns JSON output
-    
+    objectvar = post.MakePostData()
     strout = post.GetDataString() #Returns JSON output as string
+    
+
 
 ### Notice
 

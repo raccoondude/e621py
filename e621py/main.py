@@ -9,11 +9,8 @@ class User:
         self.Username = Username
         self.API_Key = API_Key
     def GetKey(self, Password):
-        parm = {
-            "_client":"epy/0.0 (This is a python module by github.com/raccoondude)"
-        }
         Head = {
-                "User-Agent":"EPY/1.0 (A_raccoondude)"
+                "User-Agent":"e621py/1.0 (Python)"
         }
         URL = "https://e621.net/user/login.json?name="+self.Username+"&password="+Password
         uwu = urllib.request.Request(URL, headers=Head)
@@ -38,7 +35,7 @@ class Post:
         self.Post_ID = Post_ID
     def GetData(self):
         Head = {
-                "User-Agent":"EPY/1.0 (A_raccoondude)"
+                "User-Agent":"e621py/1.0 (Raccoondude)"
         }
         URL = "https://e621.net/post/show.json?id="+self.Post_ID
         uwu = urllib.request.Request(URL, headers=Head)
@@ -46,7 +43,7 @@ class Post:
         return owo
     def GetDataString(self):
         Head ={
-                "User-Agent":"EPY/1.0 (A_raccoondude)"
+                "User-Agent":"e621py/1.0 (Raccoondude)"
         }
         URL = "https://e621.net/post/show.json?id="+self.Post_ID
         uwu = urllib.request.Request(URL, headers=Head)
@@ -54,7 +51,7 @@ class Post:
         return owo.read()
     def GetDataJson(self):
         Head = {
-                "User-Agent":"EPY/1.0 (A_raccoondude)"
+                "User-Agent":"e621py/1.0 (Raccoondude)"
         }
         URL = "https://e621.net/post/show.json?id="+self.Post_ID
         uwu = urllib.request.Request(URL, headers=Head)
@@ -65,7 +62,7 @@ class Post:
         return UwU
     def GetTags(self):
         Head = {
-            "User-Agent":"EPY/1.0 (A_raccoondude)"
+            "User-Agent":"e621py/1.0 (Raccoondude)"
         }
         URL = "https://e621.net/post/show.json?id="+self.Post_ID
         uwu = urllib.request.Request(URL, headers=Head)
@@ -77,7 +74,7 @@ class Post:
         return uwu.split(" ")
     def MakePostData(self):
         Head = {
-            "User-Agent":"EPY/1.0 (A_raccoondude)"
+            "User-Agent":"e621py/1.0 (Raccoondude)"
         }
         URL = "https://e621.net/post/show.json?id="+self.Post_ID
         uwu = urllib.request.Request(URL, headers=Head)
@@ -94,7 +91,7 @@ class Post:
         return OwO
     def GetArtist(self):
         Head = {
-            "User-Agent":"EPY/1.0 (A_raccoondude)"
+            "User-Agent":"e621py/1.0 (Raccoondude)"
         }
         URL = "https://e621.net/post/show.json?id="+self.Post_ID
         uwu = urllib.request.Request(URL, headers=Head)
@@ -105,7 +102,7 @@ class Post:
         return UwU['artist']
     def GetFileURL(self):
         Head = {
-            "User-Agent":"EPY/1.0 (A_raccoondude)"
+            "User-Agent":"e621py/1.0 (Raccoondude)"
         }
         URL = "https://e621.net/post/show.json?id="+self.Post_ID
         uwu = urllib.request.Request(URL, headers=Head)
@@ -116,7 +113,7 @@ class Post:
         return UwU['file_url']
     def GetRating(self):
         Head = {
-            "User-Agent":"EPY/1.0 (A_raccoondude)"
+            "User-Agent":"e621py/1.0 (Raccoondude)"
         }
         URL = "https://e621.net/post/show.json?id="+self.Post_ID
         uwu = urllib.request.Request(URL, headers=Head)
@@ -127,7 +124,7 @@ class Post:
         return UwU['rating']
     def isNSFW(self):
         Head = {
-            "User-Agent":"EPY/1.o (A_raccoondude)"
+            "User-Agent":"e621py/1.0 (Raccoondude)"
         }
         URL = "https://e621.net/post/show.json?id="+self.Post_ID
         uwu = urllib.request.Request(URL, headers=Head)
