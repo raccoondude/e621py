@@ -36,9 +36,28 @@ run: `pip3 install e621py`
     post = Post("POST ID")
     
     jsonout = post.GetData() #Returns JSON output
-    objectvar = post.MakePostData()
+    objectvar  = post.MakePostData() #returns data object
     strout = post.GetDataString() #Returns JSON output as string
+	NSFW = post.isNSFW() #returns true or false
+	post.Show() #returns image in imagick
+	Rate = post.GetRating() #returns rating
+	File = post.GetFileURL() #return file url
     
+
+**Query**
+
+    import e621py
+    import json
+    
+    Query = e621py.Query()
+    
+    Results = Query.Tag("male/male+cuddling") #returns a string of text
+    Results = json.loads(Results)
+    
+    URL = Results[0]['file_url'] #first [] defines whitch out of the set to pick from, the second is for the json query
+    
+    Query.Show(URL) #Shows image from url
+    Query.Save(URL) #Saves image from url
 
 
 ### Notice
