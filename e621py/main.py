@@ -54,7 +54,7 @@ class Post:
         URL = "https://e621.net/post/show.json?id="+self.Post_ID
         uwu = urllib.request.Request(URL, headers=Head)
         owo = urllib.request.urlopen(uwu)
-        return owo.read()
+        return owo.read().decode('utf-8')
     def GetDataJson(self):
         Head = {
                 "User-Agent":"e621py/1.0 (Raccoondude)"
