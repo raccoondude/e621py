@@ -6,7 +6,7 @@ A e621 API wrapper for python!
 
 ### Current status
 
-Beta Devloping (0.12)
+Beta Devloping (0.14)
 
 ### documentation
 
