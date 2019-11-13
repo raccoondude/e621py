@@ -1,5 +1,7 @@
+import urllib.parse
 import urllib.request
 import json
+from e621py.download import Download as OwODownload
 import requests
 import os
 from PIL import Image
@@ -154,6 +156,17 @@ class Post:
         img = Image.open(BytesIO(response.content))
         img.show()
         return 0
+    def Save(self):
+        Head = {
+            "User-Agent":"e621py/1.0 (Raccoondude)"
+        }
+        URL = "https://e621.net/post/show.json?id="+self.Post_ID
+        uwu = urllib.request.Request(URL, headers=Head)
+        owo = urllib.request.urlopen(uwu)
+        owo = owo.read()
+        owo = owo.decode()
+        UwU = json.loads(owo)
+        OwODownload(UwU['file_url']).download()
         
 class Query:
     def __init__(self):
@@ -174,5 +187,5 @@ class Query:
         img.show()
         return 0
     def Save(self, url):
-        os.system("mkdir .owo && cd .owo && wget "+url)
+        OwODownload(url).download()
         return 0

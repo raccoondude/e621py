@@ -70,4 +70,6 @@ I am NOT responsible for any actions done with this module
 
 Everything was done by me
 
-The little logo was done by [Vorskul](https://instagram.com/voskul "Vorskul")
+The little logo was done by Vorskul
+
+Used [downloader-cli](https://github.com/deepjyoti30/downloader-clihttp:// "downloader-cli") please go show him some love!
