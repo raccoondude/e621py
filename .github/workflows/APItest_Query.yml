@@ -1,4 +1,4 @@
-name: CI
+name: Query
 
 on: [push]
 
@@ -9,8 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: importing
       run: |
+        sudo python3 -m pip install pillow
         sudo python3 setup.py install
+    - name: Running test
+      run: |
+        echo plz wait
