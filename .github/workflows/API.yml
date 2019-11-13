@@ -1,4 +1,4 @@
-name: APItest_Post
+name: Post
 
 on: [push]
 
