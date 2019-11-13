@@ -15,4 +15,4 @@ jobs:
         sudo python3 setup.py install
     - name: Running test
       run: |
-        echo plz wait
+        python3 Test/APItest_Query.py
