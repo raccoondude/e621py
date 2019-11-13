@@ -1,4 +1,4 @@
-name: APItest
+name: APItest_Post
 
 on: [push]
 
@@ -9,11 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: Importing
       run: |
-        echo Testing.....
-        sudo python3 -m pip install pillow
         sudo python3 setup.py install
+        sudo python3 -m pip install pillow
+    - name: Running test
+      run: |
         python3 Test/APItest.py
