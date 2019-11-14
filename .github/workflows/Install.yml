@@ -1,0 +1,15 @@
+name: Install
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Installing
+      run: sudo python3 setup.py install
+    - name: Test Run
+      run: python3 -m e621py
