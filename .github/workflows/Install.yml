@@ -14,4 +14,4 @@ jobs:
         sudo python3 -m pip install pillow
         sudo python3 setup.py install
     - name: Test Run
-      run: python3 -m e621py
+      run: python -c "import e621py"
