@@ -14,4 +14,4 @@ jobs:
         sudo python3 -m pip install pillow urllib3
         sudo python3 setup.py install
     - name: Test Run
-      run: python -c "import e621py"
+      run: python3 -c "import e621py"
