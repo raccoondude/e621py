@@ -10,6 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Installing
-      run: sudo python3 setup.py install
+      run: |
+        sudo python3 -m pip install pillow
+        sudo python3 setup.py install
     - name: Test Run
       run: python3 -m e621py
