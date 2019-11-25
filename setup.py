@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'e621py',         # How you named your package folder (MyLib)
   packages = ['e621py'],   # Chose the same as "name"
-  version = '0.14',      # Start with a small number and increase it with every change you make
+  version = '1.00',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'A e621 API wraper',   # Give a short description about your library
   author = 'Raccoondude',                   # Type in your name

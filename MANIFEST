@@ -2,4 +2,5 @@
 setup.cfg
 setup.py
 e621py/__init__.py
+e621py/download.py
 e621py/main.py

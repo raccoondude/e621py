@@ -1,12 +1,12 @@
-# epy
+# e621py
 
-[![epy](https://i.imgur.com/DOqumRI.jpg "epy")](https://i.imgur.com/DOqumRI.jpg "epy")
+[![e621py](https://i.imgur.com/DOqumRI.jpg "e621py")](https://i.imgur.com/DOqumRI.jpg "e621py")
 A e621 API wrapper for python!
 
 
 ### Current status
 
-Beta Devloping (0.14)
+Release 1.00
 
 ### documentation
 
@@ -72,4 +72,4 @@ Everything was done by me
 
 The little logo was done by Vorskul
 
-Used [downloader-cli](https://github.com/deepjyoti30/downloader-clihttp:// "downloader-cli") please go show him some love!
+Used [downloader-cli](https://github.com/deepjyoti30/downloader-cli "downloader-cli") please go show him some love!
