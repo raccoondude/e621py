@@ -62,9 +62,9 @@ run: `pip3 install e621py`
 
 ### Notice
 
-By using this module, you agree to E621s ToS, and you are willing to view sesitive content (NSFW/L)
-
 I am NOT responsible for any actions done with this module
+
+If there is an issue, I cannot stop it, please don't bother me
 
 ### Credit
 
