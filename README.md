@@ -51,7 +51,7 @@ run: `pip3 install e621py`
     
     Query = e621py.Query()
     
-    Results = Query.Tag("male/male+cuddling") #returns a string of text
+    Results = Query.Tag("male/male+cuddling+rating:s") #returns a string of text
     Results = json.loads(Results)
     
     URL = Results[0]['file_url'] #first [] defines whitch out of the set to pick from, the second is for the json query
