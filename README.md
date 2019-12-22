@@ -10,6 +10,12 @@ Release 1.00
 
 ### documentation
 
+## USE THIS
+
+My code is shit, i mean, it works, but it's shit.
+
+So, if you want to edit the source code, use this [fork] (https://github.com/superwhiskers/e621py "fork")
+
 **Installation**
 
 run: `pip3 install e621py`
