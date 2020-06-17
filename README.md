@@ -1,5 +1,7 @@
 # e621py
 
+BROKEN, e621py is outdated and will no longer work
+
 [![e621py](https://i.imgur.com/DOqumRI.jpg "e621py")](https://i.imgur.com/DOqumRI.jpg "e621py")
 A e621 API wrapper for python!
 
